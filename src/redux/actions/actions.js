@@ -1,4 +1,8 @@
-import { ADD_TODO, DELETE_TODO, SET_COMPLETED } from "../constants/constants";
+import {
+  ADD_TODO,
+  DELETE_TODO,
+  TOGGLE_COMPLETED,
+} from "../constants/constants";
 
 //add todo action
 export const addTodo = (todo) => ({
@@ -13,7 +17,7 @@ export const deleteTodo = (id) => ({
 });
 
 //set compeleted todo action
-export const setCompleted = (id) => ({
-  type: SET_COMPLETED,
+export const toggleCompleted = (id) => ({
+  type: TOGGLE_COMPLETED,
   id,
 });
