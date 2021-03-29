@@ -1,38 +1,31 @@
-.App {
-  text-align: center;
+/* Import Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root {
+  --orange-color: #f3c266;
+  --brown-color: #4d1919d2;
+  --red-color: #df4242;
+  --gray-color: #afa8a8;
+  --light-gray-color: #f0eaea;
+  --font-size: 15px;
+  --font-family: "Josefin Sans", sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+html {
+  font-size: var(--font-size);
+  font-family: var(--font-family);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Todo-App__container {
+  width: 100%;
+  max-width: 90%;
+  margin: 0 auto;
 }
