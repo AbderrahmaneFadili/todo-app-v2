@@ -6,6 +6,12 @@ const TodoItem = (props) => {
   const {
     todo: { id, title, completed },
   } = props;
+
+  const handleTrachClick = () => {
+    console.log(id);
+    props.actions.deleteTodo(id);
+  };
+
   return (
     <li className="App__todo-item">
       {/* Icon Left : check */}
@@ -27,7 +33,10 @@ const TodoItem = (props) => {
       </span>
 
       {/* Icon Right : check */}
-      <FaRegTrashAlt className="App__todo-item__remove" />
+      <FaRegTrashAlt
+        className="App__todo-item__remove"
+        onClick={handleTrachClick}
+      />
     </li>
   );
 };

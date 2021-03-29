@@ -1,4 +1,5 @@
 import { ADD_TODO, DELETE_TODO, SET_COMPLETED } from "../constants/constants";
+import lodash from "lodash";
 
 const initialState = {
   todos: [],
@@ -13,8 +14,12 @@ const todosReducer = (state = initialState, action) => {
       };
     }
 
-    case DELETE_TODO:
-      return state;
+    case DELETE_TODO: {
+      return {
+        ...state,
+        todos: [...state.todos.filter((t) => t.id !== action.id)],
+      };
+    }
     case SET_COMPLETED:
       return state;
     default:

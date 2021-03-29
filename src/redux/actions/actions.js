@@ -6,12 +6,14 @@ export const addTodo = (todo) => ({
   todo,
 });
 
-//add todo action
+//delte todo action
 export const deleteTodo = (id) => ({
   type: DELETE_TODO,
+  id,
 });
 
-//add todo action
+//set compeleted todo action
 export const setCompleted = (id) => ({
   type: SET_COMPLETED,
+  id,
 });
