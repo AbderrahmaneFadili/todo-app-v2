@@ -2,7 +2,10 @@ import React from "react";
 import "./TodoItem.css";
 import { FaRegTrashAlt, FaCheck } from "react-icons/fa";
 
-const TodoItem = ({ completed, title, id }) => {
+const TodoItem = (props) => {
+  const {
+    todo: { id, title, completed },
+  } = props;
   return (
     <li className="App__todo-item">
       {/* Icon Left : check */}

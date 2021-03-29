@@ -1,7 +1,8 @@
 import React from "react";
 import "./Header.css";
 
-const Header = () => {
+const Header = (props) => {
+  console.log(props);
   return (
     <header className="App__header">
       <h1 className="App__title">Todo App</h1>
